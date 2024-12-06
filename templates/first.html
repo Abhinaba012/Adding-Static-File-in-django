@@ -1,0 +1,94 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            margin: 20px;
+        }
+        .food-item {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .food-item:hover {
+            transform: scale(1.05);
+        }
+        .food-item img {
+            width: 100%;
+            height: auto;
+        }
+        .food-item-content {
+            padding: 15px;
+        }
+        .food-item-title {
+            font-size: 1.5em;
+            margin: 0 0 10px;
+        }
+        .food-item-description {
+            font-size: 1em;
+            margin: 0 0 10px;
+        }
+        .food-item-price {
+            font-size: 1.2em;
+            color: #ff6347;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Food App</h1>
+</header>
+
+<div class="container">
+    <div class="food-item">
+        <img src="{% static 'images/pizza.jpg' %}" alt="Food Image 1">
+        <div class="food-item-content">
+            <h2 class="food-item-title">Delicious Pizza</h2>
+            <p class="food-item-description">A classic Italian pizza with fresh tomatoes, mozzarella cheese, and basil leaves.</p>
+            <p class="food-item-price">$12.99</p>
+        </div>
+    </div>
+    
+    <div class="food-item">
+        <img src="{% static 'images/burger.webp' %}" alt="Food Image 2">
+        <div class="food-item-content">
+            <h2 class="food-item-title">Spicy Tacos</h2>
+            <p class="food-item-description">Mexican tacos filled with spicy beef, fresh lettuce, cheese, and a tangy sauce.</p>
+            <p class="food-item-price">$8.99</p>
+        </div>
+    </div>
+    
+    <div class="food-item">
+        <img src="{% static 'images/Sushi.jpg' %}" alt="Food Image 3">
+        <div class="food-item-content">
+            <h2 class="food-item-title">Sushi Platter</h2>
+            <p class="food-item-description">An assortment of fresh sushi including salmon, tuna, and avocado rolls.</p>
+            <p class="food-item-price">$15.99</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
